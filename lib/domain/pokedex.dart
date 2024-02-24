@@ -1,23 +1,23 @@
 import 'dart:convert';
 
-Pokdex pokdexFromJson(String str) => Pokdex.fromJson(json.decode(str));
+Pokedex PokedexFromJson(String str) => Pokedex.fromJson(json.decode(str));
 
-String pokdexToJson(Pokdex data) => json.encode(data.toJson());
+String PokedexToJson(Pokedex data) => json.encode(data.toJson());
 
-class Pokdex {
+class Pokedex {
     int count;
     String next;
     dynamic previous;
     List<Result> results;
 
-    Pokdex({
+    Pokedex({
         required this.count,
         required this.next,
         required this.previous,
         required this.results,
     });
 
-    factory Pokdex.fromJson(Map<String, dynamic> json) => Pokdex(
+    factory Pokedex.fromJson(Map<String, dynamic> json) => Pokedex(
         count: json["count"],
         next: json["next"],
         previous: json["previous"],

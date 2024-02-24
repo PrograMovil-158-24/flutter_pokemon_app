@@ -8,14 +8,14 @@ const itemsPage = 20;
 
 //CRUD operations
 //List of pokemons
-Future<Pokdex> getPokemons(int numberPage) async {
+Future<Pokedex> getPokemons(int numberPage) async {
   Response response = await dio.get(
     urlBase,
     queryParameters: {'offset': (numberPage - 1) * itemsPage, 'limit': itemsPage},
   );
 
   if(response.statusCode == 200) {
-    return Pokdex.fromJson(response.data);
+    return Pokedex.fromJson(response.data);
   } else {
     throw Exception('Failed to load pokemons');
   }
