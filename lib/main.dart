@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokemon_app/core/routers/app_router.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

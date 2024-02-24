@@ -10,6 +10,12 @@ class DetailsScreen extends StatefulWidget {
 class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Details'),
+      ),
+      body: const Center(
+        child: Text('Details Screen'),
+      ));
   }
 }
